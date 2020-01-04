@@ -7,5 +7,6 @@ RUN curl -sfL https://raw.githubusercontent.com/golangci/golangci-lint/master/in
 RUN wget https://raw.githubusercontent.com/Financial-Times/upp-coding-standard/v1.0.0/golangci-config/.golangci.yml
 
 COPY entrypoint.sh /entrypoint.sh
+COPY .golangci.yml /.golangci.yml
 
 ENTRYPOINT ["/entrypoint.sh"]
