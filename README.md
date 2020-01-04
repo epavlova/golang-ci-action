@@ -1,5 +1,6 @@
-# Container Action Template
+# golang-ci-action
 
-To get started, click the `Use this template` button on this repository [which will create a new repository based on this template](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/).
+GitHub action that puts in one place a few steps common CI steps for Go project.
 
-For info on how to build your first Container action, see the [toolkit docs folder](https://github.com/actions/toolkit/blob/master/docs/container-action.md).
+Please keep in mind that creating a GitHub action that executes multiple steps and essentially is doing a few different things may not be a good pattern. 
+However it solves the problem of having CI configuration source for multiple projects in one single place.
