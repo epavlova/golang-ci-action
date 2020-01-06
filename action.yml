@@ -1,9 +1,21 @@
 name: 'Golang CI Action'
 description: 'Action that executes common CI steps for Go project'
 author: 'epavlova'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
 branding:
   icon: 'smile'
   color: 'yellow'
+inputs:
+  coverallsToken:
+    description: 'Coveralls token needed to upload test results to Coveralls'
+    required: true
+  golangciVersion:
+    description: 'Version of golangci runner to be used'
+    required: false
+    default: 'v1.18.0'
+  golangciConfigVersion:
+    description: 'Version of our golangci configuration file'
+    required: false
+    default: 'v1.0.0'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
